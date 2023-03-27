@@ -1,0 +1,194 @@
+$misto-font: Misto
+$main-font: Bebas Neue
+
+$dark-green:#02798a
+$cyan:#02fafe
+$dark:#01001c
+
+$align: center
+$width: 100%
+
+@mixin font($size, $color, $famirly)
+    color: $color
+    font-family: $famirly
+    font-size: $size
+
+@mixin flex($direction, $justify, $aligne-i, $wrap)
+    display: flex
+    flex-direction: $direction
+    justify-content: $justify
+    align-items: $aligne-i
+    flex-wrap: $wrap
+@mixin smooth-shape ($thickness)
+    border-radius: 30px
+    border: $cyan solid
+    border-width: $thickness
+
+
+//миксин для шрифта, флекса,
+*
+    margin: 0
+    padding: 0
+
+body
+    @include font(18px, $dark-green, $main-font)
+    background: $dark
+    overflow-x: hidden
+
+h2
+    @include font(36px, $cyan, $misto-font)
+    display: block
+    text-align: $align
+
+footer
+    padding-top: 10px
+    @include flex (row, space-around, $align, inherit)
+    margin-right: 300px
+    a
+        display: block
+
+.header
+    padding-top: 10px
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 77
+    border-bottom: $dark-green solid 2px
+    height: 40px
+    width: $width/2 - 20%
+
+.menu
+    width: $width - 10%
+    height: $width
+    @include flex (row, space-around, $align, inherit)
+    a
+        display: block
+        color: $dark-green
+        text-decoration: none
+        b
+            @include font (24px, #fff, Exotc350 Bd BT)
+            &:hover
+                color: $cyan
+        &:hover
+            color: $cyan
+.button
+    background: $cyan
+    @include smooth-shape (1px)
+    @include font(30px,$dark, $main-font)
+    padding: 10px 30px
+    font-weight: 600
+    text-decoration: none
+.bord
+    @include smooth-shape (2px )
+    padding: 15px
+    width: 160px
+    thransition: 0.3 ease
+
+    animation: 2s linear infinite pufh
+
+    @keyframes pufh
+        0%
+            transform: scaleX(0.9)
+            @include smooth-shape (3px)
+            
+        25%
+            transform: scaleX(1)
+            @include smooth-shape (2px)
+            
+        100%
+            transform: scaleX(0.9)
+            @include smooth-shape (3px)
+    &:hover
+        background: $cyan
+        padding: 20px
+
+#cont-1
+    position: relative
+    top: 400px
+    left: 620px
+
+
+.anima
+    height: 100vh
+    width: $width
+    background: url('../img/promo_01.jpg')
+    background-size: cover
+    h1
+        position: relative
+        top: 200px
+        left: 100px
+        display: block
+        @include font(72px, $cyan , $misto-font )
+
+.about-us
+    padding-top: 60px
+    padding-bottom: 60px
+    height: 520px
+    width: $width
+    background: $dark   
+    p
+        margin: auto
+        font-size: 30px
+        font-weight: 400
+        display: block
+        text-align: $align
+        width: 80%
+        background: linear-gradient(to bottom right, $cyan, #cf72b3)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+.containerrr
+    background: $dark
+    @include flex(row, inherit, inherit, inherit)
+    div
+        padding-top: 30px
+        width: 90%
+.galery
+    
+    margin-left: 40px
+    @include flex(row, inherit , inherit, wrap)
+
+.offer
+    width: 250px
+    height: 250px
+    display: block
+    padding: 10px
+    @include font(28px, $cyan , $misto-font )
+    text-decoration: none
+    text-align: $align
+    svg
+        opacity: 0.5
+    &:hover
+        color: #ff00f2
+    p
+        position: relative
+        top: -145px
+
+.player
+    padding: 60px 300px
+    background: #000
+    h2
+        margin-bottom: 30px
+
+.ads
+    height: 180px
+    background: url('../img/promo_13.jpg')
+    background-size: cover
+
+#but-2
+    margin-left: 80%
+    position: relative
+    top: 60px
+
+
+#preloader
+    background: $dark
+    height: 100vh
+    width: $width
+    position: fixed
+    z-index: 926983746796
+    @include flex(inherit, $align , $align, inherit )
+    svg
+        opacity: 1
+.progress-ring-circle
+    transform-origin: center
+    transform: rotate(-90deg)

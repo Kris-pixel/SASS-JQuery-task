@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    background-image: url('imgs/bg.jpg');
+        position: fixed;
+        left:0;
+        top:0;
+        bottom: 0;
+        right: 0;
+        min-height: 100vh;
+}
+header{
+    margin: 30px;
+    font: 72px 'Algeria One';
+    text-decoration-line: underline;
+    display: block;
+    color: white;
+}
+#map{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 70px;
+}
+#add-gid{
+    width: 60%;
+}
+#info-place{
+    /* outline: turquoise solid 2px; */
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px 5px;
+    width: 50%;
+    height: 100hv;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+svg{
+    display: block;
+    
+    fill: transparent;
+    stroke: #ff0000;
+    stroke-width: 2px;
+}
+svg text{
+    stroke: #ff0000;
+    stroke-width: 0.5px;
+    fill: #ff0000;
+}
+.needle{
+    fill:#fff;
+    stroke:transparent;
+}
+
+p{
+     /* outline: rgb(255, 173, 22) solid 2px; */
+    font: 33px 'Cormorant Unicase';
+    text-align: left;
+    color:#fff;
+}
+img{
+    z-index: 100;
+    position: absolute;
+}
+#illustration{
+    position: inherit;
+    display: block;
+    max-width: 600px;
+    max-height: 280px;
+    float: left;
+    border-radius: 5px;
+}
+.facts{
+    font-size: 22px;
+    margin: 10px 0px;
+}
